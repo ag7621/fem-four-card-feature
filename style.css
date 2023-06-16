@@ -11,12 +11,15 @@
     --very-lt-gray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
 
+    --very-dk-blue-alpha: hsla(217, 37%, 69%, 0.25);
+
     /* components */
     --clr-main-heading: var(--very-dk-blue);
     --clr-text-primary: var(--gray-blue);
 
     --clr-main-bg: var(--very-lt-gray);
     --clr-card-bg: var(--white);
+    --clr-card-box-shadow: var(--very-dk-blue-alpha);
 
     --clr-card-supervisor: var(--cyan);
     --clr-card-team-builder: var(--red);
@@ -133,32 +136,51 @@ header>p {
 }
 
 .card {
-    /* background-color: var(--clr-card-bg); */
-    background: teal;
+    background-color: var(--clr-card-bg);
+    border-radius: 5px;
     max-width: 21.875rem;
+    padding: 1.5rem 2rem 2rem;
+    line-height: 1.9;
+    box-shadow: 0 10px 10px var(--clr-card-box-shadow);
+}
+
+.card__title {
+    color: var(--clr-main-heading);
+    font-size: 1.25rem;
+}
+
+.card>p {
+    font-size: 12px;
+    width: 85%;
+    margin: 0.25rem 0 2.5rem;
+    line-height: 1.9;
+}
+
+.card__icon {
+    float: right;
 }
 
 .card--supervisor {
-    border-top: 0.3125rem solid var(--clr-card-supervisor);
+    border-top: 0.25rem solid var(--clr-card-supervisor);
     /* grid-area: supervisor; */
     grid-column: 1/2;
     grid-row: 1/3;
 }
 
 .card--team-builder {
-    border-top: 0.3125rem solid var(--clr-card-team-builder);
+    border-top: 0.25rem solid var(--clr-card-team-builder);
     /* grid-area: team-builder; */
     grid-column: 2/3;
 }
 
 .card--karma {
-    border-top: 0.3125rem solid var(--clr-card-karma);
+    border-top: 0.25rem solid var(--clr-card-karma);
     /* grid-area: karma; */
     grid-column: 2/3;
 }
 
 .card--calculator {
-    border-top: 0.3125rem solid var(--clr-card-calculator);
+    border-top: 0.25rem solid var(--clr-card-calculator);
     /* grid-area: calculator; */
     grid-column: 3/4;
     grid-row: 1/3;
